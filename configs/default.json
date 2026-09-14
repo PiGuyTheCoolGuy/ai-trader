@@ -1,0 +1,33 @@
+{
+  "data": {
+    "symbols": ["BTCUSDT", "ETHUSDT", "SOLUSDT"],
+    "interval": "5m",
+    "start": "2021-01-01",
+    "end": null,
+    "directory": "data",
+    "workers": 4
+  },
+  "model": {
+    "threads": 0,
+    "horizon_bars": 12,
+    "rounds": 2000,
+    "early_stopping_rounds": 100,
+    "trials": 3,
+    "min_calibration_trades": 30,
+    "min_edge_bps": 5
+  },
+  "risk": {
+    "initial_equity": 10000,
+    "fee_bps": 10,
+    "slippage_bps": 3,
+    "position_fraction": 0.25,
+    "risk_per_trade": 0.005,
+    "stop_loss": 0.015,
+    "take_profit": 0.03,
+    "daily_loss_limit": 0.03,
+    "max_drawdown": 0.15,
+    "min_notional": 10,
+    "flatten_utc_day": true
+  },
+  "output": "artifacts"
+}

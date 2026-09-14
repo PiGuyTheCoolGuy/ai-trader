@@ -1,0 +1,18 @@
+{
+  "data": {
+    "symbols": ["BTCUSDT", "ETHUSDT", "SOLUSDT", "ADAUSDT", "XRPUSDT"],
+    "interval": "1m",
+    "start": "2021-01-01",
+    "directory": "data-1m",
+    "workers": 4
+  },
+  "model": {
+    "threads": 0,
+    "horizon_bars": 60,
+    "rounds": 4000,
+    "early_stopping_rounds": 150,
+    "trials": 6,
+    "min_calibration_trades": 100
+  },
+  "output": "artifacts-large"
+}

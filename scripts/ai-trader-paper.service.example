@@ -1,0 +1,17 @@
+[Unit]
+Description=AI Trader forward paper session
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+User=treic
+WorkingDirectory=/home/treic/ai-trader
+ExecStart=/home/treic/ai-trader/.venv/bin/ai-trader paper --run /home/treic/ai-trader/artifacts/REPLACE_RUN_ID --state /home/treic/ai-trader/artifacts/paper.sqlite
+Restart=on-failure
+RestartSec=30
+Environment=PYTHONUNBUFFERED=1
+NoNewPrivileges=true
+
+[Install]
+WantedBy=multi-user.target
